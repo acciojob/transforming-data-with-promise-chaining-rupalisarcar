@@ -1,9 +1,11 @@
 //your JS code here. If required.
 const btn = document.getElementById('btn');
 const output = document.getElementById('output');
+const inputNumber = document.getElementById('ip');
+inputNumber.value=5;
 const promise1 =()=>{
 	return new Promise((resolve,reject)=>{
-		const inputNumber = document.getElementById('ip').value;
+		
 		console.log(`inputNumber`, inputNumber)
 		setTimeout(()=>{
 			resolve(inputNumber)
