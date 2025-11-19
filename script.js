@@ -5,8 +5,6 @@ const inputNumber = document.getElementById('ip');
 inputNumber.value=5;
 const promise1 =()=>{
 	return new Promise((resolve,reject)=>{
-		
-		console.log(`inputNumber`, inputNumber)
 		setTimeout(()=>{
 			resolve(inputNumber)
 		},2000)
@@ -46,19 +44,19 @@ const promise5 =(num)=>{
 }
 btn.addEventListener('click',()=>{
 	promise1().then((num)=>{
-		output.innerHTML=`Result ${num}`;
+		output.innerHTML=`Result: ${num}`;
 		return promise2(num)
 	}).then((num)=>{
-		output.innerHTML=`Result ${num}`;
+		output.innerHTML=`Result: ${num}`;
 		return promise3(num)
 	}).then((num)=>{
-		output.innerHTML=`Result ${num}`;
+		output.innerHTML=`Result: ${num}`;
 		return promise4(num)
 	}).then((num)=>{
-		output.innerHTML=`Result ${num}`;
+		output.innerHTML=`Result: ${num}`;
 		return promise5(num)
 	}).then((num)=>{
-		output.innerHTML = `Final Result ${num}`;
+		output.innerHTML = `Final Result: ${num}`;
 	}).catch((e)=>{
 		console.log(e)
 	})
